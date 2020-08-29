@@ -1,6 +1,6 @@
 # Multi kernel notebook
 
-## Installit in your environment
+## Install your environment
 
 Create environment:
 
