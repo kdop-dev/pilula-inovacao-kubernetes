@@ -1,0 +1,24 @@
+h1 {
+    color: blue;
+    font-variant-caps: all-small-caps;
+    font-size: 46px;
+}
+
+h2 {
+  color: darkblue;
+  font-size: 36px;
+}
+
+h3 {
+  color: darkblue;
+  font-size: 18px;
+}
+
+li {
+  color: blue;
+  font-size: 20px;
+}
+
+body {
+    background: whitesmoke;
+}
