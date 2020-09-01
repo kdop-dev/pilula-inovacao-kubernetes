@@ -1,6 +1,6 @@
 # Ferramentas
 
-## WSL2
+## Windows Subsystem for Linux 2
 
 Fonte: [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10#:~:text=Check%20your%20Windows%20version%20by,build%20is%20lower%20than%2018361.) e [Updating the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 
