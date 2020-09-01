@@ -49,7 +49,6 @@ NAME             STATUS   ROLES    AGE     VERSION
 docker-desktop   Ready    master   9m20s   v1.16.6-beta.0
 ```
 
-
 ## VS Code
 
 Fonte: [Download Visual Studio Code](https://code.visualstudio.com/download)
