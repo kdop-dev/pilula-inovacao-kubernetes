@@ -36,7 +36,6 @@ docker build -t kdop/jupyter-bash:0.1 .
 docker run -it -v $PWD:/home/jovyan/work -p 8888:8888 kdop/jupyter-bash:0.1
 ```
 
-
 ## References
 
 * [Python, R, Bash in one Jupyter Notebook](https://evodify.com/python-r-bash-jupyter-notebook/)
