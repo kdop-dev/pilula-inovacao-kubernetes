@@ -1,6 +1,0 @@
-numpy
-pandas
-rpy2
-ipykernel
-bash_kernel
-jupyter
