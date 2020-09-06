@@ -6,11 +6,17 @@ RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get install -y apt-transport-https gnupg2 curl
 
+# Azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
+# kubectl
 RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 
 RUN mv kubectl /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
+
+# helm
+RUN wget -c https://get.helm.sh/helm-v3.3.1-linux-amd64.tar.gz -O - | tar -xz
+RUN mv helm /usr/local/bin/helm && chmod +x /usr/local/bin/helm
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip
