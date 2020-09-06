@@ -49,6 +49,48 @@ NAME             STATUS   ROLES    AGE     VERSION
 docker-desktop   Ready    master   9m20s   v1.16.6-beta.0
 ```
 
+Alguns _hacks_ que irão economizar tempo:
+
+```bash
+nano ~/.bashrc
+
+# no editor, no final do arquivo adicione
+
+alias k='kubectl'
+alias kg='kubectl get'
+alias kl='kubectl logs -f'
+
+kns() {
+    kubectl config set-context --current --namespace="$1"
+}
+
+# ctrl +x, Y e [enter] para sair salvando do editor
+
+source ~/.bashrc
+```
+
+Na linha de comando:
+
+```bash
+kns kdop
+Context "kdop" modified.
+
+kg pods
+NAME                                                         READY   STATUS    RESTARTS   AGE
+binder-7c477f4dc6-b2p2f                                      1/1     Running   0          76m
+hub-5d9bdccf78-dhzb9                                         1/1     Running   0          76m
+jupyter-kdop-2ddev-2dpilula-2dacao-2dkubernetes-2d5v7ifsja   1/1     Running   0          46m
+kdop-dind-rbgct                                              1/1     Running   0          77m
+kdop-dind-w95qk                                              1/1     Running   0          77m
+kdop-image-cleaner-pkzpb                                     2/2     Running   0          77m
+kdop-image-cleaner-vxdrr                                     2/2     Running   0          77m
+proxy-6496df9b98-xcwgq                                       1/1     Running   0          76m
+user-scheduler-8497d757d5-gxfvs                              1/1     Running   0          76m
+user-scheduler-8497d757d5-jrrxj                              1/1     Running   0          76m
+
+kl pod/binder-7c477f4dc6-b2p2f
+```
+
 ## VS Code
 
 Fonte: [Download Visual Studio Code](https://code.visualstudio.com/download)
