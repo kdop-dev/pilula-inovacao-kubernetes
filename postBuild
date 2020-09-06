@@ -2,8 +2,10 @@
 
 set -ex
 
-sudo curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+invoke build --env-name=root --no-kernel
 
-sudo curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
-sudo mv kubectl /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+
+mv kubectl /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
