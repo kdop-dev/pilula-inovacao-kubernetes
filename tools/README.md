@@ -174,8 +174,15 @@ Provavelmente retornará um erro de permissão. Para resolver isso:
 
 Sai do terminal e entre novamente, você será capaz de executar o comando sem `sudo`.
 
+
+## Outras ferramentas
+
+Há muitas ferramentas criadas para auxiliar na operação e desenvolvimento de kubernetes e docker e com o uso você irá selecionar as melhores para o seu uso, um destque é o [kube-shell](https://github.com/cloudnativelabs/kube-shell). Ele fornece um auxílio para completar os comando, ajuda com o significado de cada comando e valores do ambiente, como nome do cluster, namespace e usuário. Recomendado para quem está iniciando ou simplesmente gosta de um shell interativo.
+
+![](../media/kube-shell.png)
+
 ## Palavras finais
 
-Agora você tem um ambiente para criar suas imagens docker, testá-las, compartilha-las*, executar seu próprio cluster de kubernetes (Configurações | Kubernetes) e utilizar os comando `docker`, `kubectl` e `helm`.
+Agora você tem um ambiente e alguns aceleradores para criar suas imagens docker, testá-las, compartilha-las* (`docker`), executar seu próprio cluster de kubernetes (Configurações | Kubernetes), administrá-lo (`kubectl`) e instalar suas aplicações (`helm`).
 
 > * Para compartilhar uma imagem publicamente você precisará de um usuário no Docker Hub. Cuidado com informações sensíveis, tais como: tokens; senhas; endereços de rede, usuários, e-mails, tabelas, etc. Verifique seu código-fonte antes de submetê-lo à ambientes públicos.

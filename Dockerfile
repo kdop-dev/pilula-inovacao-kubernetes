@@ -22,7 +22,7 @@ RUN pip install --no-cache --upgrade pip
 
 RUN pip install --no-cache-dir notebook==6.*
 
-RUN pip3 install ipykernel bash_kernel && python3 -m bash_kernel.install
+RUN pip3 install ipykernel bash_kernel nbgitpuller && python3 -m bash_kernel.install
 
 # create user with a home directory
 ARG NB_USER
