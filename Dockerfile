@@ -15,7 +15,7 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
 RUN mv kubectl /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
 
 # helm
-RUN wget -c "https://get.helm.sh/helm-v3.3.1-linux-amd64.tar.gz" -O - | tar -xz && mv linux-amd64/helm /usr/local/bin/helm && chmod +x /usr/local/bin/helm && rm -f linux-amd64
+RUN wget -c "https://get.helm.sh/helm-v3.3.1-linux-amd64.tar.gz" -O - | tar -xz && mv linux-amd64/helm /usr/local/bin/helm && chmod +x /usr/local/bin/helm && rm -rf linux-amd64
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip
