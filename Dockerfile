@@ -11,8 +11,9 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
 RUN mv kubectl /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
 
 # install the notebook package
-RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache notebook
+RUN pip install --no-cache --upgrade pip
+
+RUN pip install --no-cache-dir notebook==5.*
 
 # create user with a home directory
 ARG NB_USER
@@ -28,3 +29,8 @@ WORKDIR ${HOME}
 USER ${USER}
 
 RUN pip3 install ipykernel bash_kernel && python3 -m bash_kernel.install
+
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
