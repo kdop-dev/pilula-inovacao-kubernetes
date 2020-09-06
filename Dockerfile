@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM jupyter/scipy-notebook:6d42503c684f
 
 RUN apt-get update && apt-get -y upgrade
 
