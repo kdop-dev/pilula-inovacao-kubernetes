@@ -1,5 +1,7 @@
 FROM jupyter/scipy-notebook:6d42503c684f
 
+USER root
+
 RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get install -y apt-transport-https gnupg2 curl
