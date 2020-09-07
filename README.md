@@ -6,8 +6,6 @@ Classic
 Lab
 [![Binder](http://binder.kdop.net/badge_logo.svg)](http://binder.kdop.net/v2/gh/kdop-dev/pilula-inovacao-kubernetes.git/master?urlpath=lab)
 
-urlpath=lab/tree/ipynb
-
 After launch, save your URL to keep the same session and results on server. If you click on link above again, it will launch a new clean session (environment/pod).
 
 > After an hour, all your results will be erased.
