@@ -14,6 +14,20 @@ Abra o documento [Windows Subsystem for Linux Installation Guide for Windows 10]
 * Set up a new distribution - selecione um nome de usuário, a primeira parte do seu e-mail estará ok
 * Set your distribution version to WSL 1 or WSL 2 - Selecione 2
 
+### wsl utils
+
+[A collection of utilities for WSL](https://github.com/wslutilities/wslu)
+
+comando: `wslfetch`
+
+![](../media/wsl-utils.png)
+
+comando: `wslview https://github.com/wslutilities/wslu/wiki/wslview`
+
+Abre a URL no navegador padrão.
+
+Ver também [Running WSL GUI Apps on Windows 10](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242)
+
 ## Docker Desktop
 
 Fonte: [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
@@ -174,12 +188,15 @@ Provavelmente retornará um erro de permissão. Para resolver isso:
 
 Sai do terminal e entre novamente, você será capaz de executar o comando sem `sudo`.
 
-
 ## Outras ferramentas
 
 Há muitas ferramentas criadas para auxiliar na operação e desenvolvimento de kubernetes e docker e com o uso você irá selecionar as melhores para o seu uso, um destque é o [kube-shell](https://github.com/cloudnativelabs/kube-shell). Ele fornece um auxílio para completar os comando, ajuda com o significado de cada comando e valores do ambiente, como nome do cluster, namespace e usuário. Recomendado para quem está iniciando ou simplesmente gosta de um shell interativo.
 
 ![](../media/kube-shell.png)
+
+Mensão honrosa para o [Visual Studio Code](https://code.visualstudio.com/) e os plugins: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), que permite executar e editar notebooks; [docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker); [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) e [Kubernetes](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools).
+
+[Anaconda](https://docs.conda.io/en/latest/miniconda.html), [Python](https://www.python.org/) e [jupyter-notebook](https://jupyter.org/), uma combinação muito útil para experimentos, automação de tarefas, treinamento e documentação de procedimentos.
 
 ## Palavras finais
 
