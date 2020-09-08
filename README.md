@@ -1,4 +1,4 @@
-# Using jupyter binder
+# Workshop interativo - Pílula de Inovação
 
 Classic
 [![Binder](http://binder.kdop.net/badge_logo.svg)](http://binder.kdop.net/v2/gh/kdop-dev/pilula-inovacao-kubernetes.git/master?filepath=index.ipynb)
@@ -6,14 +6,14 @@ Classic
 Lab
 [![Binder](http://binder.kdop.net/badge_logo.svg)](http://binder.kdop.net/v2/gh/kdop-dev/pilula-inovacao-kubernetes.git/master?urlpath=lab)
 
-After launch, save your URL to keep the same session and results on server. If you click on link above again, it will launch a new clean session (environment/pod).
+Após lançar o seu notebook, guarde a URL (copie ou adicione a barra de favotiros), isso permitirá retomar a mesma sessão do seu notebook que está sendo executada no servidor. Se você não usar a mesma URL, uma sessão limpa será criada, sem as suas modificações.
 
-> After an hour, all your results will be erased.
+> Após uma hora, todos os dados serão apagados. Ao finalizar, faça download od seu notebook.
 
-### Run locally
+## Executando localmente
 
 ```bash
-docker run -p 8888:8888 kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:bac8895cd5c65bcea79efb0253075411d881f5da
+docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:bac8895cd5c65bcea79efb0253075411d881f5da
 
 Executing the command: jupyter notebook
 [I 22:04:09.661 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
@@ -32,9 +32,10 @@ Executing the command: jupyter notebook
         http://b7ce24ecf663:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
      or http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
 ```
+
 > Não use o terminal do VS Code, ele irá reiniciar o vs code para alterar as configurações de servidor, ou execute o docker em segundo plano `docker run -d ...`
 
-#### Conectando o VS Code com seu servidor.
+### Conectando o VS Code com seu servidor
 
 Quando você executa o jupyter-notebook ele exibe uma URL como esta: http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8. Copie esta URL para utilizar no VS Code.
 
@@ -48,11 +49,15 @@ Por padrão, o kernel selecionado será o Python, troque selecionando a opção 
 
 ![](media/code-jupyter-kernel.png)
 
-## References
+## Referênciass
 
 * [How to reduce mybinder.org repository startup time](https://discourse.jupyter.org/t/how-to-reduce-mybinder-org-repository-startup-time/4956)
 * [Binder - How to guides](https://mybinder.readthedocs.io/en/latest/howto/index.html)
 * [Zero to BinderHub](https://binderhub.readthedocs.io/en/latest/zero-to-binderhub/setup-binderhub.html)
+* [https://github.com/takluyver/bash_kernel](https://github.com/takluyver/bash_kernel)
+* [Jupyter kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
+* [https://pypi.org/project/ipykernel/](https://pypi.org/project/ipykernel/)
+* [takluyver/bash_kernel](https://github.com/takluyver/bash_kernel)
 
 ## Treinamentos
 
