@@ -46,7 +46,7 @@ Verifique a integração do Docker com wsl para o seu linux, acesse Docker Deskt
 
 Você pode usar o kubernetes que vem com o Docker Desktop. Habilite-o em Configurações | Kubernetes.
 
-> Recomendado apenas se sua máquina for um Intel i5 com 8GB de RAM e apenas o VS Code rodando. Para desabilitar o kubernetes desmarque Habilitar Kubernetes nas configurações.
+> Recomendado apenas se sua máquina for um pelo menos um Intel i5 com 8GB de RAM. Para desabilitar o kubernetes desmarque Habilitar Kubernetes nas configurações.
 
 Para usar no Linux (wsl), copie o arquivo de configuração que está em ´/mnt/c/Users/seu-usuario/.kube/config` para onde desejar e configure a variável de ambiente `KUBECONFIG` para este arquivo.
 
@@ -171,6 +171,16 @@ sudo chmod 700 get_helm.sh
 helm version
 version.BuildInfo{Version:"v3.3.0", GitCommit:"8a4aeec08d67a7b84472007529e8097ec3742105", GitTreeState:"dirty", GoVersion:"go1.14.7"}
 ```
+
+## kubectl
+
+Quando você instala o Docker Desktop ele disponibiliza a ferramenta `kubectl`, porém somente enquanto está em execução. Você pode desejar controlar a versão e os plugins instalados para o seu `kubectl`, então instale uma versão independente, seguindo as instruções em: <https://kubernetes.io/docs/tasks/tools/install-kubectl/> 
+
+## krew
+
+É um gerenciador de plugins para o `kubectl`. Instale seguindo as instruções para Linux em: <https://krew.sigs.k8s.io/docs/user-guide/setup/install/#bash>
+
+Se o ingress do seu cluster for um Nginx, sugiro instar o [ingress-nginx](https://kubernetes.github.io/ingress-nginx/kubectl-plugin/), ele ajudará a avaliar configurações e eventuais problemas com suas configurações de ingress.
 
 ## Quase pronto
 
