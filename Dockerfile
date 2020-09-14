@@ -14,6 +14,8 @@ RUN curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/docker-17
   | tar -xzC /usr/local/bin --strip=1 docker/docker
 RUN groupadd docker
 RUN usermod -aG docker jovyan
+RUN apt-get install systemd -y
+RUN systemctl start docker
 
 # Azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
