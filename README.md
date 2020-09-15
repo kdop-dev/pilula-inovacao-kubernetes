@@ -1,5 +1,7 @@
 # Workshop interativo - Pílula de Inovação
 
+Conheça os principais recursos do Kubernetes de forma interativa aprendendo enquanto faz.
+
 Classic
 [![Binder](http://binder.kdop.net/badge_logo.svg)](http://binder.kdop.net/v2/gh/kdop-dev/pilula-inovacao-kubernetes.git/master?filepath=index.ipynb)
 
@@ -13,7 +15,9 @@ Após lançar o seu notebook, guarde a URL (copie ou adicione a barra de favotir
 ## Executando localmente
 
 ```bash
-docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:bac8895cd5c65bcea79efb0253075411d881f5da
+docker pull kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:3ba97a20d8e203c42219f6160f8799582df557a6
+
+docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:3ba97a20d8e203c42219f6160f8799582df557a6
 
 Executing the command: jupyter notebook
 [I 22:04:09.661 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret

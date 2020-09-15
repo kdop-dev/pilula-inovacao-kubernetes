@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:6d42503c684f
+FROM jupyter/minimal-notebook:latest
 
 USER root
 
@@ -7,14 +7,9 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y apt-transport-https gnupg2 curl wget
 
 # Docker
-ENV DOCKER_CHANNEL stable
-ENV DOCKER_VERSION 17.03.1-ce
-ENV DOCKER_API_VERSION 1.27
-RUN curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/docker-17.03.1-ce.tgz" \
-  | tar -xzC /usr/local/bin --strip=1 docker/docker
-RUN groupadd docker
+RUN apt install docker.io -y
 RUN usermod -aG docker jovyan
-ENV DOCKER_HOST tcp://docker.docker:5555
+
 
 # Azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
@@ -39,11 +34,6 @@ ARG NB_USER
 ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
-
-#RUN adduser --disabled-password \
-#    --gecos "Default user" \
-#    --uid ${NB_UID} \
-#    ${NB_USER}
 
 WORKDIR ${HOME}
 USER ${USER}
