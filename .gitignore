@@ -21,3 +21,8 @@ build/
 *.egg-info/
 kubeconfig
 config
+
+.ipython
+.local
+.kube
+work
