@@ -27,3 +27,5 @@ config
 .kube
 work
 .bash_history
+.cache
+.docker
