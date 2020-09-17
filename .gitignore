@@ -26,3 +26,4 @@ config
 .local
 .kube
 work
+.bash_history
