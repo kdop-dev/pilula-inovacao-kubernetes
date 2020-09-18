@@ -127,6 +127,8 @@ Na Azure, o LoadBalancer é L4, não tendo configuração de TLS, sendo necessá
 
 ### Configurar o ingress controller com certificado padrão
 
+Ref: [Nginx Ingress - Default SSL Certificate](https://kubernetes.github.io/ingress-nginx/user-guide/tls/)
+
 No deployment do nginx controller `kubectl get deployment.apps/ingress-nginx-controller -n ingress-nginx -o yaml > nginx-controller-deploy.yaml`
 
 Há uma seção de argumentos a serem passados para o controller
