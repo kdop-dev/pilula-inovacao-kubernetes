@@ -152,13 +152,13 @@ Adicione a linha `--default-ssl-certificate=ingress-nginx/krthomolog-secret` com
 
 No workshop as URLs que usam o certificado padrão são:
 
-https://kdop-learn.krthomolog.com.br/adsantos/cert-app/get-cert?p=As
-https://kdop-learn.krthomolog.com.br/adsantos/front-app/index
+* <https://kdop-learn.krthomolog.com.br/adsantos/cert-app/get-cert?p=Anderson>
+* <https://kdop-learn.krthomolog.com.br/adsantos/front-app/index>
 
-E sem certificado
+E sem o certificado:
 
-http://learn.kdop.net/adsantos/cert-app/get-cert?p=As
-http://learn.kdop.net/adsantos/front-app/index
+* <http://learn.kdop.net/adsantos/cert-app/get-cert?p=Anderson>
+* <http://learn.kdop.net/adsantos/front-app/index>
 
 ### Instalar o cert-manager
 

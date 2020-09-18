@@ -41,17 +41,17 @@ Executing the command: jupyter notebook
 
 ### Conectando o VS Code com seu servidor
 
-Quando você executa o jupyter-notebook ele exibe uma URL como esta: http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8. Copie esta URL para utilizar no VS Code.
+Quando você executa o jupyter-notebook ele exibe uma URL como esta: <http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8>. Copie esta URL para utilizar no VS Code.
 
 Selecione o notebook (extensão ipynb) que deseja conectar. O VS Code automaticamente iniciará um servidor no plano de fundo e renderizará o notebook.
 
 Troque o servidor, como exibido na figura abaixo.
 
-![](media/code-jupyter-server.png)
+![jupyter-server](media/code-jupyter-server.png)
 
 Por padrão, o kernel selecionado será o Python, troque selecionando a opção kernel, como na figura abaixo.
 
-![](media/code-jupyter-kernel.png)
+![jupyter-kernel](media/code-jupyter-kernel.png)
 
 ## Referênciass
 
