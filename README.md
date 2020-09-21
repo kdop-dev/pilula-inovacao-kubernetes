@@ -32,7 +32,7 @@ docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $PWD:/home/jovyan --rm --na
 
 ## Executando localmente a imagem do Binder
 
-O Binder irá gerar e subir para o Docker Hub a imagem associada ao repositório do github, mas você pode executá-la localmente, precisando conhecer apneas o nome e a tag. Para uma lista completa de tags acesse: <https://hub.docker.com/repository/docker/kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f/tags?page=1>
+O Binder irá gerar e subir para o Docker Hub a imagem associada ao repositório do github, mas você pode executá-la localmente, precisando apenas conhecer o nome e a tag. Para uma lista completa de tags acesse: <https://hub.docker.com/repository/docker/kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f/tags?page=1>
 
 ```bash
 export DOCKER_IMAGE=learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f
