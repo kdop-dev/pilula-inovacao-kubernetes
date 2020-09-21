@@ -20,7 +20,14 @@ export DOCKER_TAG=local
 
 docker build -t $DOCKER_IMAGE:$DOCKER_TAG .
 
+# Notebook
 docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan $DOCKER_IMAGE:$DOCKER_TAG
+
+# Lab
+docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes --rm --name kdop  $DOCKER_IMAGE:$DOCKER_TAG
+
+# Com seu diretório local como volume (persistente, alterar os arquivos no seu dir, mas necessário clonar o repo antes)
+docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $PWD:/home/jovyan --rm --name kdop  $DOCKER_IMAGE:$DOCKER_TAG
 ```
 
 ## Executando localmente a imagem do Binder
