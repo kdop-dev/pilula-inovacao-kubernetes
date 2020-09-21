@@ -32,3 +32,5 @@ work
 .jupyter
 .config
 .npm
+
+.dockerignore
