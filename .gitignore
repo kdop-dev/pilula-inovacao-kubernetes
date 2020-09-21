@@ -29,3 +29,8 @@ work
 .bash_history
 .cache
 .docker
+.jupyter
+.config
+.npm
+
+.dockerignore

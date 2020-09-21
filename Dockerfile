@@ -1,4 +1,5 @@
-FROM jupyter/minimal-notebook:latest
+#FROM jupyter/minimal-notebook:latest
+FROM jupyter/base-notebook:latest
 
 USER root
 
@@ -25,7 +26,7 @@ RUN wget -c "https://get.helm.sh/helm-v3.3.1-linux-amd64.tar.gz" -O - | tar -xz 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip
 
-RUN pip install --no-cache-dir notebook==6.*
+#RUN pip install --no-cache-dir notebook==6.*
 
 RUN pip3 install ipykernel bash_kernel nbgitpuller && python3 -m bash_kernel.install
 

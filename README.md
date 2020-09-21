@@ -12,29 +12,40 @@ Após lançar o seu notebook, guarde a URL (copie ou adicione a barra de favotir
 
 > Após uma hora, todos os dados serão apagados. Ao finalizar, faça download od seu notebook.
 
-## Executando localmente
+## Build local
 
 ```bash
-docker pull kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:3ba97a20d8e203c42219f6160f8799582df557a6
+export DOCKER_IMAGE=kdop/learn-kdop
+export DOCKER_TAG=local
 
-docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:3ba97a20d8e203c42219f6160f8799582df557a6
+docker build -t $DOCKER_IMAGE:$DOCKER_TAG .
 
-Executing the command: jupyter notebook
-[I 22:04:09.661 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
-[I 22:04:10.148 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.8/site-packages/jupyterlab
-[I 22:04:10.149 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 22:04:10.153 NotebookApp] Serving notebooks from local directory: /home/jovyan
-[I 22:04:10.153 NotebookApp] Jupyter Notebook 6.1.3 is running at:
-[I 22:04:10.153 NotebookApp] http://b7ce24ecf663:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
-[I 22:04:10.153 NotebookApp]  or http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
-[I 22:04:10.153 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 22:04:10.156 NotebookApp]
+docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan $DOCKER_IMAGE:$DOCKER_TAG
+```
 
-    To access the notebook, open this file in a browser:
-        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
+## Executando localmente a imagem do Binder
+
+O Binder irá gerar e subir para o Docker Hub a imagem associada ao repositório do github, mas você pode executá-la localmente, precisando conhecer apneas o nome e a tag. Para uma lista completa de tags acesse: <https://hub.docker.com/repository/docker/kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f/tags?page=1>
+
+```bash
+export DOCKER_IMAGE=learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f
+export DOCKER_TAG=3ba97a20d8e203c42219f6160f8799582df557a6
+
+docker pull kdop/learn-kdop-2ddev-2dpilula-2dinovacao-2dkubernetes-731f2f:$DOCKER_TAG
+
+# Jupyter Notebook
+docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan $DOCKER_IMAGE:$DOCKER_TAG
+
+# Jupyter Lab
+docker run -p 8888:8888 --rm --name kdop -e JUPYTER_ENABLE_LAB=yes -v $PWD:/home/jovyan kdop/$DOCKER_IMAGE:$DOCKER_TAG
+
+# Output
+...
+To access the notebook, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-7-open.html
     Or copy and paste one of these URLs:
-        http://b7ce24ecf663:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
-     or http://127.0.0.1:8888/?token=a20051ceebe822a97f3cad9dbbf464b58b26e7356f6d54e8
+        http://e5b8b0c4b501:8888/?token=77a79493c207052bc9c43e681db0d9fed586a9db096f41b7
+     or http://127.0.0.1:8888/?token=77a79493c207052bc9c43e681db0d9fed586a9db096f41b7
 ```
 
 > Não use o terminal do VS Code, ele irá reiniciar o vs code para alterar as configurações de servidor, ou execute o docker em segundo plano `docker run -d ...`
