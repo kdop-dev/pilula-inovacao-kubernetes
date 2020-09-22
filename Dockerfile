@@ -34,4 +34,5 @@ ENV HOME /home/${NB_USER}
 USER $NB_UID
 WORKDIR ${HOME}
 
-COPY --chown=${NB_USER}:${NB_GID} . ${HOME}
+#COPY --chown=${NB_USER}:${NB_GID} . ${HOME}
+COPY . ${HOME}
