@@ -29,11 +29,9 @@ RUN pip install --no-cache --upgrade pip
 RUN pip3 install ipykernel bash_kernel nbgitpuller && python3 -m bash_kernel.install
 
 # create user with a home directory
-ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
-ENV GROUP ${NB_GID}
 
 USER $NB_UID
 WORKDIR ${HOME}
 
-COPY --chown=${USER}:${GROUP} . ${HOME}
+COPY --chown=${NB_USER}:${NB_GID} . ${HOME}
