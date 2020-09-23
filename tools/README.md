@@ -105,6 +105,10 @@ user-scheduler-8497d757d5-jrrxj                              1/1     Running   0
 kl pod/binder-7c477f4dc6-b2p2f
 ```
 
+## Ingress Controller
+
+Você precisará de um ingress controller para recriar os exemplos do workshpo, para instalá-lo siga as instruçõess em: <https://kubernetes.github.io/ingress-nginx/deploy/#using-helm>.
+
 ## VS Code
 
 Fonte: [Download Visual Studio Code](https://code.visualstudio.com/download)

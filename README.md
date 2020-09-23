@@ -24,7 +24,6 @@ docker build -t $DOCKER_IMAGE:$DOCKER_TAG .
 docker run -p 8888:8888 --rm --name kdop -v $PWD:/home/jovyan $DOCKER_IMAGE:$DOCKER_TAG
 
 # Lab
-A
 docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes --rm --name kdop  $DOCKER_IMAGE:$DOCKER_TAG
 
 # Com seu diretório local como volume (persistente, alterar os arquivos no seu dir, mas necessário clonar o repo antes)
