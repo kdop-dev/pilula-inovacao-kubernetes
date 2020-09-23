@@ -1,3 +1,4 @@
+$EDITOR ~/.profile
 export KUBECONFIG=~/kubeconfig
 export myNamespace=<seu namespace>
 

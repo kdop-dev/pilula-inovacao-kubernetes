@@ -30,9 +30,10 @@ RUN pip3 install ipykernel bash_kernel nbgitpuller && python3 -m bash_kernel.ins
 
 # create user with a home directory
 ENV HOME /home/${NB_USER}
+RUN chmod 777 ${HOME}/.profile
 
 USER $NB_UID
 WORKDIR ${HOME}
-
+RUN mkdir -p ${HOME}/sh
 #COPY --chown=${NB_USER}:${NB_GID} . ${HOME}
 COPY . ${HOME}
