@@ -28,6 +28,31 @@ Abre a URL no navegador padrão.
 
 Ver também [Running WSL GUI Apps on Windows 10](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242)
 
+## Erro *Operation not permitted*
+
+Recentemente (2020-10) me deparei com esse erro quando tentava clonar um repositório do git `Operation not permitted`. O problema acontece quando tentamos alterar a permissão do arquivo com `chmod` ou `chown` . Após alguma pesquisa (ver Referências) cheguei a essa solução:
+
+Abra um terminal wsl e crie o arquivo `nano /etc/wsl.conf` com o conteúdo abaixo:
+
+```cmd
+[automount]
+options=metadata,uid=1000,gid=1000
+```
+
+Saia do termninal com `exit` e abra um terminal CMD ou Powershell e execute `wsl -l` para listar suas distros e termine a que estiver em uso, no meu caso: `wsl --terminate ubuntu2004`
+
+Abra novamente um terminal wsl e faça um teste:
+
+```bash
+touch teste
+
+chmod +x teste
+```
+
+Se não houverem erros, funcionou.
+
+Referências: [Configure per distro launch settings with wslconf](https://docs.microsoft.com/en-us/windows/wsl/wsl-config) e ["Operation not permitted" when jlink --output refer outside WSL #4917](https://github.com/microsoft/WSL/issues/4917)
+
 ## Docker Desktop
 
 Fonte: [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
