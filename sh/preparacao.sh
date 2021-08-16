@@ -1,6 +1,6 @@
 $EDITOR ~/.profile
 export KUBECONFIG=~/kubeconfig
-export myNamespace=<seu namespace>
+export myNamespace=kdop-learn
 
 cd ~/work/inovacao
 echo $PWD

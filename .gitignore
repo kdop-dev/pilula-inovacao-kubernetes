@@ -32,3 +32,6 @@ work
 .jupyter
 .config
 .npm
+
+.azure
+.metals

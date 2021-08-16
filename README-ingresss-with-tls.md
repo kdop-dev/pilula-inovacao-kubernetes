@@ -1,5 +1,9 @@
 # Configurando TLS
 
+## Pre-requisito
+
+Instalar ingress <https://kubernetes.github.io/ingress-nginx/deploy/>
+
 Há duas maneiras de abordar esse tema:
 
 1. Configurar no Ingress o certificado.
