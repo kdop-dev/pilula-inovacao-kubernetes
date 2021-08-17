@@ -5,7 +5,7 @@ USER root
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get install -y apt-transport-https gnupg2 curl wget
+RUN apt-get install -y apt-transport-https gnupg2 curl wget jq  
 
 # Docker
 RUN apt install docker.io -y

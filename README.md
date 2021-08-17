@@ -73,6 +73,24 @@ Por padrão, o kernel selecionado será o Python, troque selecionando a opção 
 
 ![jupyter-kernel](media/code-jupyter-kernel.png)
 
+## Conectando no Azure Kubernetes Service
+
+```bash
+az login
+
+az account set --subscription SharedKernel
+
+# Verificar o estado do cluster
+az aks show --name plataforma-pos --resource-group plataforma-pos | jq .powerState
+
+# Iniciar o cluster
+az aks start --name plataforma-pos --resource-group plataforma-pos
+
+# Obter as credenciais
+az aks get-credentials --resource-group plataforma-pos --name plataforma-pos -f work/kubeconfig
+
+
+
 ## Referênciass
 
 * [How to reduce mybinder.org repository startup time](https://discourse.jupyter.org/t/how-to-reduce-mybinder-org-repository-startup-time/4956)
