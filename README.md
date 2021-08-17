@@ -1,4 +1,4 @@
-# Workshop interativo - Pílula de Inovação
+# Workshop interativo
 
 Conheça os principais recursos do Kubernetes de forma interativa aprendendo enquanto faz.
 
@@ -88,6 +88,7 @@ az aks start --name plataforma-pos --resource-group plataforma-pos
 
 # Obter as credenciais
 az aks get-credentials --resource-group plataforma-pos --name plataforma-pos -f work/kubeconfig
+```
 
 ## Referênciass
 
